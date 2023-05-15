@@ -1,0 +1,6 @@
+CREATE A GRAMMAR 
+* antlr4-build *
+* javac *.java *
+* antlr4-test Hello greetings p.txt -gui *
+*antlr4-clear*
+REPEAT
