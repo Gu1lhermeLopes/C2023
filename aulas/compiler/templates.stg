@@ -1,0 +1,20 @@
+var_name(name) ::= "<name>"
+sum(e1,e2) ::= "<e1>.sum(<e2>)"
+sub(e1,e2) ::= "<e1>.sub(<e2>)"
+mul(e1,e2) ::= "<e1>.mul(<e2>)"
+div(e1,e2) ::= "<e1>.div(<e2>)"
+reduce(e1) ::= "<e1>.reduce()"
+literal(n,d) ::= "(new Frac (<n>,<d>))"
+power(b,e) ::= "<b>.power(<e>)"
+unary(e1) ::= "<e1>.unary()"
+var_d(name) ::= "Frac <name>;"
+print(e) ::= "<e>.print;"
+
+begin() ::= <<
+class Program {
+public static void main(String args[]){
+
+>>
+end() ::= <<
+}
+}

@@ -1,0 +1,24 @@
+echo "hello alunos" | antlr4-test Hello greetings
+echo "hello alunos" | antlr4-test Hello greetings -gui
+
+
+antlr4-visitor Hello MyVisitor Object
+
+antlr4-main Hello greetings -v Execute -i//top
+
+antlr4 Hello.g4 -visitor
+
+javac *.java
+
+java HelloMain
+
+
+//change code
+
+antlr4-main Hello greetings -v Execute -i
+antlr4 Hello.g4 -visitor
+
+javac *.java
+java HelloMain
+
+//3
