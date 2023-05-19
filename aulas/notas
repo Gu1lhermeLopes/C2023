@@ -1,0 +1,46 @@
+antlr4 SuffixCalculator.g4 -visitor
+javac *.java
+antlr4-test SuffixCalculator program -gui < test
+
+antlr4-visitor SuffixCalculator Interpreter Double
+
+//change Interpreter
+antlr4 SuffixCalculator.g4 -visitor
+javac *.java
+
+antlr4-main SuffixCalculator program -v Interpreter -i
+javac *.java
+java SuffixCalculatorMain
+
+
+------------------------------
+antlr4 Numbers.g4
+antlr4-listener Numbers NDict
+ntlr4 Numbers.g4
+
+
+--------------------------------------------------
+EXAME
+
+antlr4 Fraction.g4
+javac *.java
+antlr4-test Fraction program < test -gui
+
+
+javac *.java
+antlr4 Fraction.g4 -visitor
+antlr4-visitor Fraction Execute Frac
+
+antlr4-main Fraction program -visitor Execute -i
+
+
+
+
+---------------------------------------------------------
+compiler
+
+antlr4-visitor Fraction Compiler String
+
+antlr4 Fraction.g4 -visitor
+javac
+antlr4-main Fraction program -v Compiler
