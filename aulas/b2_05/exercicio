@@ -1,0 +1,24 @@
+/1.04/
+
+
+import java.io.IOException;
+import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.tree.*;
+
+after try catch
+
+try{
+
+CharStream input = CharStreams.fromStream(FileInput);
+NumbersLexer lexer = new NumbersLexer(input);
+CommonTokenStream tokens = new CommonTokenStream(lexer);
+NumbersParser parser = new NumbersParser(tokens);
+}catch{}
+if (parser.getNumberOfSyntaxErrors() != 0) {
+    System.exit(2);
+}
+ParseTreeWalker walker = new ParseTreeWalker();
+NDict listener0 = new NDict();
+walker.walk(listener0, tree);
+
+return listener0.mappings;
